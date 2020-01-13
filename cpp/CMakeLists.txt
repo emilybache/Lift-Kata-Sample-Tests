@@ -15,7 +15,8 @@ LIST(APPEND CMAKE_MODULE_PATH
         ${catch2_SOURCE_DIR}/contrib
         )
 
-target_include_directories(
+add_library(catch2 INTERFACE)
+target_include_directories(catch2
         INTERFACE ${catch2_SOURCE_DIR}/single_include/catch2
         )
 
