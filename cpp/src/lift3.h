@@ -6,7 +6,7 @@
 
 class Person {
 public:
-    Person(const std::string& name, int current_floor, int destination) {};
+    Person(const std::string &name, int current_floor, int destination) {};
     int destination;
     int currentFloor;
 };
@@ -18,7 +18,7 @@ public:
 
 class SmallLift : public Lift {
 public:
-    explicit SmallLift(int floor){}
+    explicit SmallLift(int floor) {}
 };
 
 class Controller {
@@ -26,9 +26,10 @@ public:
     void movePeople(std::vector<Person> people);
 };
 
-class SmallController: public Controller {
+class SmallController : public Controller {
 public:
     explicit SmallController(Lift lift) {};
 
 };
+
 #endif //LIFTKATA_LIFT3_H

@@ -5,9 +5,8 @@
 TEST_CASE("Lift delivers to requested floor in a greedy way")
 {
     given([](Lift &lift) {
-        auto commandHandler = GreedyLiftCommandHandler();
-        auto building = Building(-2, 6);
-        lift = Lift(building, commandHandler);
+        lift.setBuilding(Building(-2, 6));
+        lift.setCommandHandler(GreedyLiftCommandHandler());
         lift.turnOn();
         lift.go(3);
         lift.go(4);

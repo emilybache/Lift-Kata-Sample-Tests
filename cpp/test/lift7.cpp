@@ -3,7 +3,7 @@
 
 TEST_CASE("Idle lift accepts call")
 {
-    auto lift = Lift(0);
+    Lift lift(0);
     auto accepts_call = lift.acceptsCall(
             Call(3, Movement::DOWN)
     );

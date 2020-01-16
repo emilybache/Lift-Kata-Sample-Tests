@@ -6,7 +6,7 @@
 TEST_CASE("Elevator will move up and down then standby until next move down and up")
 {
     // Given
-    auto elevator = Elevator(floor(0));
+    Elevator elevator(floor(0));
 
     // When
     elevator.floorCall(floor(56), Direction::DOWN);

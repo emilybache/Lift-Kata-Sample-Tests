@@ -4,7 +4,7 @@
 TEST_CASE("3. After pressing the button, elevator closes\n"
           "doors, and once they are closed,\n"
           "        it starts the engine.") {
-    Lift e = Lift(7);
+    Lift e(7);
     e.pushButton(1);
     ElevatorAction a = e.nextAction();
     REQUIRE(a == ElevatorAction::CLOSE_DOORS);

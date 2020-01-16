@@ -2,10 +2,13 @@
 #define LIFTKATA_LIFT5_H
 
 
-class GreedyLiftCommandHandler
+class CommandHandler
 {
 public:
-    GreedyLiftCommandHandler(){};
+    CommandHandler(){};
+};
+class GreedyLiftCommandHandler : public CommandHandler
+{
 };
 
 class Building
@@ -17,8 +20,10 @@ public:
 class Lift
 {
 public:
-    Lift(Building building, GreedyLiftCommandHandler commandHandler){};
+    Lift(Building building, CommandHandler commandHandler){};
 
+    void setBuilding(Building building);
+    void setCommandHandler(CommandHandler commandHandler);
     void turnOn();
     void go(int floor);
     void operate();
